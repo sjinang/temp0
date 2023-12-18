@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Dec  2 23:02:35 2023
+# Process ID: 2275254
+# Current directory: /home/users/kj2011/Documents/rasterizer-fall-2023/rtl
+# Command line: vivado
+# Log file: /home/users/kj2011/Documents/rasterizer-fall-2023/rtl/vivado.log
+# Journal file: /home/users/kj2011/Documents/rasterizer-fall-2023/rtl/vivado.jou
+# Running On: iron-03, OS: Linux, CPU Frequency: 2245.780 MHz, CPU Physical cores: 2, Host memory: 202790 MB
+#-----------------------------------------------------------
+start_gui

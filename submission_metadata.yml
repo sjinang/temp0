@@ -1,0 +1,1068 @@
+---
+submission_216975964:
+  :submitters:
+  - :name: Alice Sun Fontaine
+    :sid: '06758767'
+    :email: afontain@stanford.edu
+  - :name: Marissa Hsu
+    :sid: '06754968'
+    :email: hsuma@stanford.edu
+  :created_at: 2023-12-02 02:52:07.938335000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_216996427:
+  :submitters:
+  - :name: Naveen Vankadara
+    :sid: '06828527'
+    :email: naveen82@stanford.edu
+  - :name: Yulin Deng
+    :sid: '06488044'
+    :email: dengy@stanford.edu
+  :created_at: 2023-12-02 04:04:59.089605000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_216537555:
+  :submitters:
+  - :name: Zhichao Sun
+    :sid: '06433975'
+    :email: zcsun@stanford.edu
+  - :name: Nicholas Rush
+    :sid: '06760682'
+    :email: nrush@stanford.edu
+  :created_at: 2023-11-30 22:45:14.344165000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217362225:
+  :submitters:
+  - :name: Bo Wun Cheng
+    :sid: '06758214'
+    :email: bwcheng@stanford.edu
+  - :name: Vamshi Balanaga
+    :sid: '06293278'
+    :email: balanaga@stanford.edu
+  :created_at: 2023-12-04 05:26:26.899837000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history:
+  - :submitters: []
+    :created_at: 2023-12-04 07:30:05.262325000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 217383000
+submission_217191681:
+  :submitters:
+  - :name: Sai Saketika Chekuri
+    :sid: '06755156'
+    :email: saketika@stanford.edu
+  - :name: Sai Gautham Ravipati
+    :sid: '06761005'
+    :email: sgautham@stanford.edu
+  :created_at: 2023-12-03 08:36:30.409435000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_216667716:
+  :submitters:
+  - :name: Tengbo Wang
+    :sid: '06759834'
+    :email: tengboww@stanford.edu
+  :created_at: 2023-12-01 05:25:21.716840000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_216967269:
+  :submitters:
+  - :name: Owen Garner Ryan
+    :sid: '06544783'
+    :email: owenr@stanford.edu
+  - :name: Andrew H Yang
+    :sid: '06504561'
+    :email: ahyang@stanford.edu
+  :created_at: 2023-12-02 02:24:38.858169000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217021293:
+  :submitters:
+  - :name: Yu-Wei Wang
+    :sid: '06744347'
+    :email: ywwang20@stanford.edu
+  - :name: Rodrigo Ruz Cuen
+    :sid: '06203526'
+    :email: ruz@stanford.edu
+  :created_at: 2023-12-02 05:30:50.288394000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217048562:
+  :submitters:
+  - :name: Zongru Li
+    :sid: '06739763'
+    :email: zongruli@stanford.edu
+  - :name: Jonathan Sharir-Smith
+    :sid: '06664361'
+    :email: jsharirs@stanford.edu
+  :created_at: 2023-12-02 08:19:57.577170000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history:
+  - :submitters: []
+    :created_at: 2023-12-01 06:59:12.419858000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 216688425
+  - :submitters: []
+    :created_at: 2023-12-02 03:24:29.632734000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 216984775
+submission_217029317:
+  :submitters:
+  - :name: Calvin Lee
+    :sid: '06759561'
+    :email: lclee3@stanford.edu
+  - :name: Evan Chen
+    :sid: '06374275'
+    :email: evnchen@stanford.edu
+  :created_at: 2023-12-02 06:02:36.499537000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history:
+  - :submitters: []
+    :created_at: 2023-11-30 02:07:23.037492000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 216255674
+submission_217019684:
+  :submitters:
+  - :name: Harihara Subramanian Ranganathan
+    :sid: '06734379'
+    :email: hari512@stanford.edu
+  :created_at: 2023-12-02 05:20:48.510912000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217337668:
+  :submitters:
+  - :name: Brion Qi Ye
+    :sid: '06423802'
+    :email: brionqye@stanford.edu
+  - :name: Justin Wei
+    :sid: '06423480'
+    :email: jwei31@stanford.edu
+  :created_at: 2023-12-04 03:58:17.524955000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history:
+  - :submitters: []
+    :created_at: 2023-12-03 04:24:40.825971000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 217168494
+submission_216993263:
+  :submitters:
+  - :name: Ammar Ali Ratnani
+    :sid: '06753647'
+    :email: aratnani@stanford.edu
+  - :name: Michael Jonathan Yu
+    :sid: '06454660'
+    :email: mjyu@stanford.edu
+  :created_at: 2023-12-02 03:54:53.628168000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217033377:
+  :submitters:
+  - :name: Justin Clarke Weiler
+    :sid: '06457854'
+    :email: jweiler@stanford.edu
+  - :name: Ananya Chadha
+    :sid: '06453165'
+    :email: ananyach@stanford.edu
+  :created_at: 2023-12-02 06:30:34.416506000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217381703:
+  :submitters:
+  - :name: Hugo Chen
+    :sid: '06495916'
+    :email: hugochen@stanford.edu
+  - :name: Jennifer Jiang
+    :sid: '06661965'
+    :email: qjiang81@stanford.edu
+  :created_at: 2023-12-04 07:20:04.236695000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217173101:
+  :submitters:
+  - :name: Senyang Jiang
+    :sid: '06299807'
+    :email: senyangj@stanford.edu
+  - :name: Lixian Yan
+    :sid: '06756776'
+    :email: lxyn5869@stanford.edu
+  :created_at: 2023-12-03 04:59:24.749935000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217032305:
+  :submitters:
+  - :name: Andres Reyna
+    :sid: '06664538'
+    :email: reynaa@stanford.edu
+  - :name: Guillem Rueda Oller
+    :sid: '06499750'
+    :email: grueda@stanford.edu
+  :created_at: 2023-12-02 06:24:36.120928000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history:
+  - :submitters: []
+    :created_at: 2023-12-02 06:20:18.294527000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 217031631
+submission_217160821:
+  :submitters:
+  - :name: Binxu Li
+    :sid: '06755380'
+    :email: andy0207@stanford.edu
+  - :name: Pu Deng
+    :sid: '06750590'
+    :email: piaodeng@stanford.edu
+  :created_at: 2023-12-03 03:22:48.284401000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history:
+  - :submitters: []
+    :created_at: 2023-12-02 23:19:49.159668000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 217129363
+submission_217703526:
+  :submitters:
+  - :name: Adrian Sadik Molofsky
+    :sid: '06445109'
+    :email: molofsky@stanford.edu
+  - :name: Brian B Pham
+    :sid: '06414990'
+    :email: brpham@stanford.edu
+  :created_at: 2023-12-05 08:56:51.619380000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217040044:
+  :submitters:
+  - :name: Calvin Sokk
+    :sid: '06455760'
+    :email: calsokk@stanford.edu
+  - :name: Pamela Saidoni
+    :sid: '06662948'
+    :email: psaidoni@stanford.edu
+  :created_at: 2023-12-02 07:18:14.610351000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217046463:
+  :submitters:
+  - :name: Caoimhe Lyons
+    :sid: '06759679'
+    :email: cmlyons@stanford.edu
+  :created_at: 2023-12-02 07:57:21.918831000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history:
+  - :submitters: []
+    :created_at: 2023-12-02 07:36:19.403106000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 217042778
+submission_217177643:
+  :submitters:
+  - :name: Marcos Bentolila
+    :sid: '06662280'
+    :email: mvb5932@stanford.edu
+  - :name: Neelesh Ramachandran
+    :sid: '06285451'
+    :email: neeleshr@stanford.edu
+  :created_at: 2023-12-03 05:42:59.814313000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217004269:
+  :submitters:
+  - :name: Sandra Chea
+    :sid: '06749969'
+    :email: schea@stanford.edu
+  - :name: Reuben Rosenberg
+    :sid: '06761056'
+    :email: reubenr@stanford.edu
+  :created_at: 2023-12-02 04:29:45.246890000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217386895:
+  :submitters:
+  - :name: Austin Joseph Brown
+    :sid: '06319700'
+    :email: ajb497@stanford.edu
+  - :name: Matthew Hamilton
+    :sid: '06660840'
+    :email: matth512@stanford.edu
+  :created_at: 2023-12-04 07:54:08.800630000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_216930038:
+  :submitters:
+  - :name: Kerry Tu
+    :sid: '06376578'
+    :email: kjwtu@stanford.edu
+  - :name: Joshuah Chen
+    :sid: '06321462'
+    :email: jchen0@stanford.edu
+  :created_at: 2023-12-02 00:13:32.994154000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_216698164:
+  :submitters:
+  - :name: Fyyaz Khan
+    :sid: '06487438'
+    :email: fyyaz@stanford.edu
+  - :name: Sanush Nukshan Kehelella
+    :sid: '06522327'
+    :email: snk21@stanford.edu
+  :created_at: 2023-12-01 07:59:24.043110000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217149327:
+  :submitters:
+  - :name: Sawyer Brooks Brundage
+    :sid: '06756913'
+    :email: brundasa@stanford.edu
+  - :name: Brandon Kim
+    :sid: '06755643'
+    :email: bkim1301@stanford.edu
+  :created_at: 2023-12-03 01:45:03.924425000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217052547:
+  :submitters:
+  - :name: Marina Qian
+    :sid: '06742067'
+    :email: qiany11@stanford.edu
+  :created_at: 2023-12-02 09:54:19.404298000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217050169:
+  :submitters:
+  - :name: Kamal Karda
+    :sid: '05847779'
+    :email: kkarda@stanford.edu
+  :created_at: 2023-12-02 08:45:10.164469000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_216685891:
+  :submitters:
+  - :name: Yuexi Fan
+    :sid: '06744082'
+    :email: yuexi@stanford.edu
+  - :name: Shruti Parag Landge
+    :sid: '06744114'
+    :email: slandge@stanford.edu
+  :created_at: 2023-12-01 06:45:38.383341000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217000570:
+  :submitters:
+  - :name: Malik Hubbard
+    :sid: '06359725'
+    :email: mhubb@stanford.edu
+  - :name: Clemente Benjamin Farias Canepa
+    :sid: '06383986'
+    :email: cbfarcan@stanford.edu
+  :created_at: 2023-12-02 04:17:26.748943000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_216981761:
+  :submitters:
+  - :name: Ottar Snaer Yngvason
+    :sid: '06645575'
+    :email: ottar@stanford.edu
+  - :name: Andrew Marcial Romero
+    :sid: '06664155'
+    :email: aromero6@stanford.edu
+  :created_at: 2023-12-02 03:12:27.481920000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217033818:
+  :submitters:
+  - :name: Zhouhua Xie
+    :sid: '06503962'
+    :email: xzh015@stanford.edu
+  - :name: Yifan Yang
+    :sid: '06503964'
+    :email: yyang29@stanford.edu
+  :created_at: 2023-12-02 06:33:54.467299000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217378263:
+  :submitters:
+  - :name: Xiangjin Wu
+    :sid: '06405444'
+    :email: xiangjin@stanford.edu
+  - :name: Koustav Jana
+    :sid: '06650988'
+    :email: kj2011@stanford.edu
+  :created_at: 2023-12-04 06:55:45.410681000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_217178060:
+  :submitters:
+  - :name: Ashutosh Kumar
+    :sid: '06757101'
+    :email: ashukmr@stanford.edu
+  - :name: Suresh Nambi
+    :sid: '06433515'
+    :email: snambi@stanford.edu
+  :created_at: 2023-12-03 05:47:09.937243000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history:
+  - :submitters: []
+    :created_at: 2023-12-01 08:25:16.705754000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 216700261
+  - :submitters: []
+    :created_at: 2023-12-02 23:01:57.962343000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 217126670
+submission_217650340:
+  :submitters:
+  - :name: Andrew Matthew Woen
+    :sid: '06504543'
+    :email: amwoen@stanford.edu
+  - :name: Erica Wood
+    :sid: '06512361'
+    :email: wooderi@stanford.edu
+  :created_at: 2023-12-05 04:18:21.444389000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []
+submission_216890587:
+  :submitters:
+  - :name: Yichen Wang
+    :sid: '06756119'
+    :email: wangyich@stanford.edu
+  - :name: Cornelia Wang
+    :sid: '06755163'
+    :email: zw2816@stanford.edu
+  :created_at: 2023-12-01 22:39:41.911262000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history:
+  - :submitters: []
+    :created_at: 2023-11-30 20:35:41.671504000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 216486820
+  - :submitters: []
+    :created_at: 2023-12-01 19:46:08.381103000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 216817263
+  - :submitters: []
+    :created_at: 2023-12-01 19:46:46.784124000 Z
+    :score: 0.0
+    :status: processed
+    :results:
+      score: 0.0
+      tests: []
+      output: This assignment does not have an autograder configured.
+      extra_data: 
+      visibility: 
+      leaderboard: []
+      output_format: 
+      execution_time: 
+      test_name_format: 
+      test_output_format: 
+    :id: 216817893
+submission_217045636:
+  :submitters:
+  - :name: Ziyad Saber Gawish
+    :sid: '06337649'
+    :email: zgawish@stanford.edu
+  - :name: Yusef Qazi
+    :sid: '06421644'
+    :email: yqazi27@stanford.edu
+  :created_at: 2023-12-02 07:54:12.996748000 Z
+  :score: 0.0
+  :status: processed
+  :results:
+    score: 0.0
+    tests: []
+    output: This assignment does not have an autograder configured.
+    extra_data: 
+    visibility: 
+    leaderboard: []
+    output_format: 
+    execution_time: 
+    test_name_format: 
+    test_output_format: 
+  :history: []

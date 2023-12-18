@@ -1,0 +1,320 @@
+/*
+ *  Performs Sample Test on triangle
+ *
+ *  Inputs:
+ *    Sample and triangle Information
+ *
+ *  Outputs:
+ *    Subsample Hit Flag, Subsample location, and triangle Information
+ *
+ *  Function:
+ *    Utilizing Edge Equations determine whether the
+ *    sample location lies inside the triangle.
+ *    In the simple case of the triangle, this will
+ *    occur when the sample lies to one side of all
+ *    three lines (either all left or all right).
+ *    This corresponds to the minterm 000 and 111.
+ *    Additionally, if backface culling is performed,
+ *    then only keep the case of all right.
+ *
+ *  Edge Equation:
+ *    For an edge defined as travelling from the
+ *    vertice (x_1,y_1) to (x_2,y_2), the sample
+ *    (x_s,y_s) lies to the right of the line
+ *    if the following expression is true:
+ *
+ *    0 >  ( x_2 - x_1 ) * ( y_s - y_1 ) - ( x_s - x_1 ) * ( y_2 - y_1 )
+ *
+ *    otherwise it lies on the line (exactly 0) or
+ *    to the left of the line.
+ *
+ *    This block evaluates the six edges described by the
+ *    triangles vertices,  to determine which
+ *    side of the lines the sample point lies.  Then it
+ *    determines if the sample point lies in the triangle
+ *    by or'ing the appropriate minterms.  In the case of
+ *    the triangle only three edges are relevant.  In the
+ *    case of the quadrilateral five edges are relevant.
+ *
+ *
+ *   Author: John Brunhaver
+ *   Created:      Thu 07/23/09
+ *   Last Updated: Tue 10/06/10
+ *
+ *   Copyright 2009 <jbrunhaver@gmail.com>
+ *
+ *
+ */
+
+/* A Note on Signal Names:
+ *
+ * Most signals have a suffix of the form _RxxxxN
+ * where R indicates that it is a Raster Block signal
+ * xxxx indicates the clock slice that it belongs to
+ * and N indicates the type of signal that it is.
+ * H indicates logic high, L indicates logic low,
+ * U indicates unsigned fixed point, and S indicates
+ * signed fixed point.
+ *
+ */
+
+module sampletest
+#(
+    parameter SIGFIG        = 24, // Bits in color and position.
+    parameter RADIX         = 10, // Fraction bits in color and position
+    parameter VERTS         = 3, // Maximum Vertices in triangle
+    parameter AXIS          = 3, // Number of axis foreach vertex 3 is (x,y,z).
+    parameter COLORS        = 3, // Number of color channels
+    parameter PIPE_DEPTH    = 2 // How many pipe stages are in this block
+)
+(
+    input logic signed [SIGFIG-1:0]     tri_R16S[VERTS-1:0][AXIS-1:0], // triangle to Iterate Over
+    input logic unsigned [SIGFIG-1:0]   color_R16U[COLORS-1:0] , // Color of triangle
+    input logic signed [SIGFIG-1:0]     sample_R16S[1:0], // Sample Location
+    input logic                         validSamp_R16H, // A valid sample location
+
+    input logic clk, // Clock
+    input logic rst, // Reset
+
+    output logic signed [SIGFIG-1:0]    hit_R18S[AXIS-1:0], // Hit Location
+    output logic unsigned [SIGFIG-1:0]  color_R18U[COLORS-1:0] , // Color of triangle
+    output logic                        hit_valid_R18H                   // Is hit good
+);
+
+    localparam EDGES = (VERTS == 3) ? 3 : 5;
+    localparam SHORTSF = SIGFIG;
+    localparam MROUND = (2 * SHORTSF) - RADIX;
+
+    // output for retiming registers
+    logic signed [SIGFIG-1:0]       hit_R18S_retime[AXIS-1:0];   // Hit Location
+    logic unsigned [SIGFIG-1:0]     color_R18U_retime[COLORS-1:0];   // Color of triangle
+    logic                           hit_valid_R18H_retime;   // Is hit good
+    // output for retiming registers
+
+    // Signals in Access Order
+    logic signed [SIGFIG-1:0]       tri_shift_R16S[VERTS-1:0][1:0]; // triangle after coordinate shift
+    logic signed [SIGFIG-1:0]       edge_R16S[EDGES-1:0][1:0][1:0]; // Edges
+    // logic signed [(2*SHORTSF)-1:0]  dist_lg_R16S[EDGES-1:0]; // Result of x_1 * y_2 - x_2 * y_1
+    // logic signed [(2*(SIGFIG-RADIX))-1:0]  dist_lg_R16S_int[EDGES-1:0]; // Integer part of x_1 * y_2 - x_2 * y_1
+    // logic signed [(2*RADIX)-1:0]  dist_lg_R16S_dec[EDGES-1:0]; // Decimal part of x_1 * y_2 - x_2 * y_1
+    logic                           hit_valid_R16H ; // Output (YOUR JOB!)
+    logic signed [SIGFIG-1:0]       hit_R16S[AXIS-1:0]; // Sample position
+    // Signals in Access Order
+
+    // Your job is to produce the value for hit_valid_R16H signal, which indicates whether a sample lies inside the triangle.
+    // hit_valid_R16H is high if validSamp_R16H && sample inside triangle (with back face culling)
+    // Consider the following steps:
+
+    // START CODE HERE
+    // (1) Shift X, Y coordinates such that the fragment resides on the (0,0) position.
+    generate
+    for(genvar i = 0; i < VERTS; i = i + 1) begin
+        for(genvar j = 0; j < 2; j = j + 1) begin
+            always_comb begin
+                tri_shift_R16S[i][j] = tri_R16S[i][j] - sample_R16S[j];
+            end
+        end
+    end
+    endgenerate
+    // (2) Organize edges (form three edges for triangles)
+    generate
+        for(genvar i = 0; i < 2; i = i + 1) begin
+            always_comb begin
+                // edge 0 is from vertex 0 to vertex 1
+                edge_R16S[0][0][i] = tri_shift_R16S[0][i];
+                edge_R16S[0][1][i] = tri_shift_R16S[1][i];
+
+                // edge 1 is from vertex 1 to vertex 2
+                edge_R16S[1][0][i] = tri_shift_R16S[1][i];
+                edge_R16S[1][1][i] = tri_shift_R16S[2][i];
+
+                // edge 2 is from vertex 2 to vertex 0
+                edge_R16S[2][0][i] = tri_shift_R16S[2][i];
+                edge_R16S[2][1][i] = tri_shift_R16S[0][i];
+            end
+        end
+    endgenerate
+    
+    // (3) Calculate distance x_1 * y_2 - x_2 * y_1
+    localparam half_SIG = SIGFIG/2;
+    logic signed [SIGFIG-1:0] u1[EDGES-1:0], v1[EDGES-1:0], u2[EDGES-1:0], v2[EDGES-1:0];
+    logic signed [SIGFIG-1:0] ac1[EDGES-1:0],bd1[EDGES-1:0],ac2[EDGES-1:0],bd2[EDGES-1:0];
+    logic signed [(SIGFIG*2)-1:0] t11[EDGES-1:0],t12[EDGES-1:0];
+    // logic unsigned  [(SIGFIG*2)-1:0] t21[EDGES-1:0],t22[EDGES-1:0];
+    logic signed [SIGFIG+half_SIG:0] psum1[EDGES-1:0],psum2[EDGES-1:0];
+    logic signed [(SIGFIG*2)-1:0] out_pos1[EDGES-1:0], out_pos2[EDGES-1:0];
+    // logic signed [(SIGFIG*2)-1:0] out_pos1_inv[EDGES-1:0], out_pos2_inv[EDGES-1:0];
+    logic signed [(SIGFIG*2)-1:0] out1[EDGES-1:0], out2[EDGES-1:0];
+
+
+    generate
+        for(genvar i = 0; i < EDGES; i = i + 1) begin
+            always_comb begin
+                // dist_lg_R16S[i] = edge_R16S[i][0][0] * edge_R16S[i][1][1] - edge_R16S[i][1][0] * edge_R16S[i][0][1];
+                // dist_lg_R16S[i] = edge_R16S[i][0][0] * edge_R16S[i][1][1];
+
+                // convert u1, v1, u2, v2 to positive numbers if needed
+                u1[i] = (edge_R16S[i][0][0]>=0) ? edge_R16S[i][0][0] :
+                        (~edge_R16S[i][0][0]+1);
+                v1[i] = (edge_R16S[i][1][1]>=0) ? edge_R16S[i][1][1] :
+                        (~edge_R16S[i][1][1]+1);
+                        
+                u2[i] = (edge_R16S[i][1][0]>=0) ? edge_R16S[i][1][0] :
+                        (~edge_R16S[i][1][0]+1);
+                v2[i] = (edge_R16S[i][0][1]>=0) ? edge_R16S[i][0][1] :
+                        (~edge_R16S[i][0][1]+1);
+
+                ac1[i] = u1[i][SIGFIG-1:half_SIG] * v1[i][SIGFIG-1:half_SIG];
+                bd1[i] = u1[i][half_SIG-1:0] * v1[i][half_SIG-1:0];
+                
+                ac2[i] = u2[i][SIGFIG-1:half_SIG] * v2[i][SIGFIG-1:half_SIG];
+                bd2[i] = u2[i][half_SIG-1:0] * v2[i][half_SIG-1:0];
+
+                
+                t11[i] = {ac1[i],{SIGFIG{1'b0}}};
+                t12[i] = {ac2[i],{SIGFIG{1'b0}}};
+
+                // assign t2= bd;
+
+                psum1[i] = {(u1[i][SIGFIG-1:half_SIG]+u1[i][half_SIG-1:0]) * (v1[i][SIGFIG-1:half_SIG]+v1[i][half_SIG-1:0])
+                           - ac1[i] - bd1[i], {half_SIG{1'b0}}};
+                psum2[i] = {(u2[i][SIGFIG-1:half_SIG]+u2[i][half_SIG-1:0]) * (v2[i][SIGFIG-1:half_SIG]+v2[i][half_SIG-1:0])
+                           - ac2[i] - bd2[i], {half_SIG{1'b0}}};
+
+                out_pos1[i] = t11[i]+psum1[i]+bd1[i];
+                out_pos2[i] = t12[i]+psum2[i]+bd2[i];
+
+                // Invert to 2's complement if needed
+                out1[i] = (edge_R16S[i][0][0][SIGFIG-1] ^ edge_R16S[i][1][1][SIGFIG-1])? ~out_pos1[i]+1 :
+                        out_pos1[i];
+                        //   ~out_pos1[i]+{1'b1,{(SIGFIG*2-1){1'b0}}};
+                out2[i] = (edge_R16S[i][1][0][SIGFIG-1] ^ edge_R16S[i][0][1][SIGFIG-1])? ~out_pos2[i]+1 :
+                        out_pos2[i];
+                        //   ~out_pos2[i]+{1'b1,{(SIGFIG*2-1){1'b0}}};
+                // dist_lg_R16S_int[i] = signed'(edge_R16S[i][0][0][SIGFIG-1:RADIX]) * signed'(edge_R16S[i][1][1][SIGFIG-1:RADIX]) - 
+                //                       signed'(edge_R16S[i][1][0][SIGFIG-1:RADIX]) * signed'(edge_R16S[i][0][1][SIGFIG-1:RADIX]);
+                // dist_lg_R16S_dec[i] = signed'(edge_R16S[i][0][0][RADIX-1:0] * edge_R16S[i][1][1][RADIX-1:0] - edge_R16S[i][1][0][RADIX-1:0] * edge_R16S[i][0][1][RADIX-1:0]);
+            end
+        end
+    endgenerate
+    // (4) Check distance and assign hit_valid_R16H.
+    // hit_valid_R16H is high if validSamp_R16H && sample inside triangle (with back face culling)
+    // hit_valid_R16H = validSamp_R16H && (dist_lg_R16S[0] <= {(2*SHORTSF){1'b0}}) && (dist_lg_R16S[1] < {(2*SHORTSF){1'b0}}) && (dist_lg_R16S[2] <= {(2*SHORTSF){1'b0}});
+    // assign hit_valid_R16H = validSamp_R16H;
+    // assign hit_valid_R16H = validSamp_R16H && (dist_lg_R16S[0] <= 0) && (dist_lg_R16S[1] < 0) && (dist_lg_R16S[2] <= 0);
+    assign hit_valid_R16H = validSamp_R16H && (out1[0] - out2[0] <= 0) && 
+                            (out1[1] - out2[1] < 0) && 
+                            (out1[2] - out2[2] <= 0);
+    
+
+    // END CODE HERE
+
+    //Assertions to help debug
+    //Check if correct inequalities have been used
+    // assert property( @(posedge clk) (dist_lg_R16S[1] == 0) |-> !hit_valid_R16H);
+
+    //Calculate Depth as depth of first vertex
+    // Note that a barrycentric interpolation would
+    // be more accurate
+    always_comb begin
+        hit_R16S[1:0] = sample_R16S[1:0]; //Make sure you use unjittered sample
+        hit_R16S[2] = tri_R16S[0][2]; // z value equals the z value of the first vertex
+    end
+
+    /* Flop R16 to R18_retime with retiming registers*/
+    dff2 #(
+        .WIDTH          (SIGFIG         ),
+        .ARRAY_SIZE     (AXIS           ),
+        .PIPE_DEPTH     (PIPE_DEPTH - 1 ),
+        .RETIME_STATUS  (1              )
+    )
+    d_samp_r1
+    (
+        .clk    (clk            ),
+        .reset  (rst            ),
+        .en     (1'b1           ),
+        .in     (hit_R16S       ),
+        .out    (hit_R18S_retime)
+    );
+
+    dff2 #(
+        .WIDTH          (SIGFIG         ),
+        .ARRAY_SIZE     (COLORS         ),
+        .PIPE_DEPTH     (PIPE_DEPTH - 1 ),
+        .RETIME_STATUS  (1              )
+    )
+    d_samp_r2
+    (
+        .clk    (clk                ),
+        .reset  (rst                ),
+        .en     (1'b1               ),
+        .in     (color_R16U         ),
+        .out    (color_R18U_retime  )
+    );
+
+    dff_retime #(
+        .WIDTH          (1              ),
+        .PIPE_DEPTH     (PIPE_DEPTH - 1 ),
+        .RETIME_STATUS  (1              ) // RETIME
+    )
+    d_samp_r3
+    (
+        .clk    (clk                    ),
+        .reset  (rst                    ),
+        .en     (1'b1                   ),
+        .in     (hit_valid_R16H         ),
+        .out    (hit_valid_R18H_retime  )
+    );
+    /* Flop R16 to R18_retime with retiming registers*/
+
+    /* Flop R18_retime to R18 with fixed registers */
+    dff2 #(
+        .WIDTH          (SIGFIG ),
+        .ARRAY_SIZE     (AXIS   ),
+        .PIPE_DEPTH     (1      ),
+        .RETIME_STATUS  (0      )
+    )
+    d_samp_f1
+    (
+        .clk    (clk            ),
+        .reset  (rst            ),
+        .en     (1'b1           ),
+        .in     (hit_R18S_retime),
+        .out    (hit_R18S       )
+    );
+
+    dff2 #(
+        .WIDTH          (SIGFIG ),
+        .ARRAY_SIZE     (COLORS ),
+        .PIPE_DEPTH     (1      ),
+        .RETIME_STATUS  (0      )
+    )
+    d_samp_f2
+    (
+        .clk    (clk                ),
+        .reset  (rst                ),
+        .en     (1'b1               ),
+        .in     (color_R18U_retime  ),
+        .out    (color_R18U         )
+    );
+
+    dff #(
+        .WIDTH          (1  ),
+        .PIPE_DEPTH     (1  ),
+        .RETIME_STATUS  (0  ) // No retime
+    )
+    d_samp_f3
+    (
+        .clk    (clk                    ),
+        .reset  (rst                    ),
+        .en     (1'b1                   ),
+        .in     (hit_valid_R18H_retime  ),
+        .out    (hit_valid_R18H         )
+    );
+
+    /* Flop R18_retime to R18 with fixed registers */
+
+endmodule
+
+
+
